@@ -5,10 +5,11 @@ export default function Carousel() {
         <div>
             <div
                 id="carouselExampleFade"
-                className="carousel slide carousel-fade"
+                className="carousel slide carousel-fade h-100"
                 data-bs-ride="carousel"
+                style={{"objectFit":"contain !important"}}
             >
-                <div className="carousel-inner">
+                <div className="carousel-inner" id="carousel">
                     <div className="carousel-caption" style={{"zIndex":"10"}}>
                         <form className="d-flex">
                             <input
