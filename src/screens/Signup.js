@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
    const [userData, setuserData] = useState({username:"",email:"",password:'',geolocation:''});
+   const navigate = useNavigate();
 
    const onChange =(e)=>{
     setuserData({...userData,[e.target.name]: e.target.value});
@@ -24,6 +26,7 @@ export default function Signup() {
             alert('Enter Valid User Data');
         }else{
             setuserData({});
+            navigate('/');
         }
     }
 

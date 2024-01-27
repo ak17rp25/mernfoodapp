@@ -8,10 +8,10 @@ export default function Card(data) {
     <div>
       <div
         className="card mt-3"
-        style={{ width: "18rem", maxHeight: "360px" }}
+        style={{ "width": "18rem", "maxHeight": "360px" }}
       >
-        <img src={data.imgSrc} className="card-img-top" alt="..."></img>
-        <div className="card-body mt-3">
+        <img src={data.imgSrc} className="card-img-top" alt="..." style={{height:"150px",objectFit:"fill"}}></img>
+        <div className="card-body">
           <h5 className="card-title">{data.foodName}</h5>
           <p className="card-text">{data.category}</p>
           <div className="container w-100">
