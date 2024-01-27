@@ -3,7 +3,6 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 
-
 export default function Login() {
   const navigate = useNavigate();
   const [userData, setuserData] = useState({
@@ -35,6 +34,8 @@ export default function Login() {
     if (!isUserDataValid.success) {
       alert("Enter Valid User Data");
     } else {
+      localStorage.setItem("authToken",isUserDataValid?.authToken);
+      console.log(localStorage.getItem("authToken"));
       navigate("/");
     }
   };
